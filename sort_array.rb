@@ -6,7 +6,9 @@ end
 
 def sort_array(num_arr)
   result = num_arr.sort do |a, b|
+    # compare number of 1's in two number
     comparison_value = count_ones(a) <=> count_ones(b)
+    # for same count sort with the sequence of the number
     comparison_value.zero? ? a <=> b : comparison_value
   end
   puts result.inspect
